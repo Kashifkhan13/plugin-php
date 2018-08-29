@@ -2232,7 +2232,7 @@ function printNode(path, options, print) {
       //    $someOtherThing
       //  )->map();
       const printedContents = path.call(print, "inner");
-      const shouldAddEndBreak = !shouldBeInlined || willBreak(printedContents);
+      const shouldAddEndBreak = !shouldBeInlined;
       const dangling = comments.printDanglingComments(path, options, true);
 
       const printedBefore = shouldPrintParenthesis
